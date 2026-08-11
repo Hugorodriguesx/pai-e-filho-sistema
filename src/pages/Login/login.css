@@ -1,0 +1,564 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background: #152135;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* =========================
+   LOGIN - ESTRUTURA PRINCIPAL
+========================= */
+
+.container {
+    width: 90vw;
+    max-width: 1600px;
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+
+/* =========================
+   PAINEL ESQUERDO
+========================= */
+
+.left-painel {
+    width: 50%;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url("../../assets/images/background-login.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+
+/* LOGO */
+
+#logotipo {
+    width: 70%;
+    max-width: 400px;
+    height: auto;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   TEXTOS DO PAINEL ESQUERDO
+========================= */
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 25px;
+}
+
+.text-left {
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 4rem);
+
+    margin: 0;
+    line-height: 1.2;
+}
+
+.text-left span {
+    color: #0662e4;
+    font-weight: bold;
+}
+
+#linha {
+    width: 100px;
+    height: 4px;
+
+    background: #0662e4;
+
+    border-radius: 10px;
+
+    margin: 0;
+}
+
+#text-left-2 {
+    color: white;
+
+    margin: 0;
+
+    line-height: 1.2;
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    margin-top: 25px;
+}
+
+.feature {
+    min-width: 140px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    text-align: center;
+}
+
+
+/* ÍCONES LUCIDE */
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+
+    color: #0662e4;
+
+    stroke-width: 1.8;
+}
+
+.feature span {
+    color: #e4e4e7;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+}
+
+
+/* SEPARADORES */
+
+.separator {
+    width: 1px;
+    height: 70px;
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   PAINEL DIREITO
+========================= */
+
+.right-painel {
+    width: 50%;
+    box-sizing: border-box;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+
+/* =========================
+   FORMULÁRIO DE LOGIN
+========================= */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+/* ÍCONE PRINCIPAL */
+
+.login-icon {
+    width: 100px;
+    height: 100px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    color: #2563eb;
+
+    background: #418bf32d;
+
+    border-radius: 50%;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+#bem-vindo {
+    color: rgb(0, 0, 0);
+
+    font-size: clamp(1rem, 3vw, 3rem);
+
+    margin: 0;
+
+    line-height: 1;
+}
+
+#faca-login {
+    color: rgb(88, 88, 88);
+
+    margin: 0;
+
+    line-height: 1;
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form {
+    width: 380px;
+    max-width: 100%;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #18181b;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.input-box {
+    height: 60px;
+    width: 380px;
+
+    border: 1px solid #d4d4d8;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    gap: 12px;
+
+    transition: 0.3s;
+
+    box-sizing: border-box;
+}
+
+.input-box:focus-within {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ÍCONES DOS INPUTS */
+
+.input-icon {
+    width: 22px;
+    height: 22px;
+
+    color: #52525b;
+
+    opacity: 0.7;
+
+    flex-shrink: 0;
+}
+
+
+/* INPUT */
+
+.input-box input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    font-size: 16px;
+
+    font-family: "Inter", sans-serif;
+}
+
+
+/* ÍCONE DO OLHO */
+
+#eye-icon {
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#eye-icon:hover {
+    color: #2563eb;
+
+    opacity: 1;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.login-button {
+    width: 100%;
+    height: 58px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background: #1841b1;
+}
+
+
+/* ÍCONE DO BOTÃO */
+
+.button-icon {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   ACESSO RESTRITO
+========================= */
+
+.access {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 10px;
+}
+
+.access-icon {
+    width: 20px;
+    height: 20px;
+
+    color: #585858;
+
+    flex-shrink: 0;
+}
+
+#access-message {
+    font-size: 17px;
+
+    color: rgb(88, 88, 88);
+
+    margin: 0;
+
+    line-height: 1;
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   RESPONSIVIDADE MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+
+        background: #ffffff;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+
+        flex-direction: column;
+
+        border-radius: 0;
+    }
+
+
+    /* ESCONDE O PAINEL ESQUERDO */
+
+    .left-painel {
+        display: none;
+    }
+
+
+    /* PAINEL DIREITO */
+
+    .right-painel {
+        width: 100%;
+        min-height: 100vh;
+
+        padding: 30px 20px;
+
+        box-sizing: border-box;
+    }
+
+    .login-form {
+        width: 100%;
+    }
+
+
+    /* ÍCONE PRINCIPAL */
+
+    .login-icon {
+        width: 35px;
+        height: 35px;
+
+        padding: 22px;
+    }
+
+
+    /* TÍTULOS */
+
+    #bem-vindo {
+        font-size: 34px;
+
+        text-align: center;
+
+        line-height: 1.1;
+    }
+
+    #faca-login {
+        text-align: center;
+
+        font-size: 16px;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* FORM */
+
+    form {
+        width: 100%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .input-box {
+        width: 100%;
+
+        height: 56px;
+    }
+
+    .input-box input {
+        font-size: 15px;
+    }
+
+
+    /* BOTÃO */
+
+    .login-button {
+        width: 100%;
+
+        height: 56px;
+
+        font-size: 16px;
+
+        border-radius: 14px;
+    }
+
+
+    /* ACESSO */
+
+    .access {
+        margin-top: 20px;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+    #access-message {
+        font-size: 14px;
+    }
+}
+

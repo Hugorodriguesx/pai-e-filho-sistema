@@ -12,8 +12,12 @@ import {
     Eye,
     EyeClosed } from 'lucide-react';
 
+import { useState } from 'react';
 
 function Login() {
+    
+    const [showPassword, setShowPassword] = useState(false);
+
   return (
     <section className="container">
         <section className="left-painel">
@@ -82,13 +86,20 @@ function Login() {
                         <div className="input-box">
                             <LockKeyhole className='input-icon'/>
                             <input 
-                                autoComplete="off"
-                                type="password" 
-                                id='password'
+                                autoComplete="off" 
+                                type={showPassword ? "text" : "password"} 
+                                id='password' 
                                 name='password' 
-                                placeholder='Digite sua senha' 
-                            />
-                            <Eye className='input-icon' id='eye-icon'/>
+                                placeholder='Digite sua senha'/> 
+                                
+                                {showPassword ? (
+                                <EyeClosed 
+                                    className="input-icon eye-icon"
+                                    onClick={() => setShowPassword(false)}/>
+                                ) : (
+                                <Eye 
+                                    className="input-icon eye-icon" 
+                                    onClick={() => setShowPassword(true)}/>)}
                         </div>
                     </div>
 

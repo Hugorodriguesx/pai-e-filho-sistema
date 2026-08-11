@@ -343,15 +343,13 @@ form {
 
 /* ÍCONE DO OLHO */
 
-#eye-icon {
+.eye-icon {
     cursor: pointer;
-
     transition: 0.2s;
 }
 
-#eye-icon:hover {
+.eye-icon:hover {
     color: #2563eb;
-
     opacity: 1;
 }
 
